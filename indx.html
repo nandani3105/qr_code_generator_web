@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="sty.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header-title">QR CODE GENERATOR </h1>
+        </header>
+
+        <section class="main">
+            <div class="content">
+                <h2>QR Code Generator</h2>
+                <p style="margin: 1.5rem 0; line-height: 1.6;">
+                    Enter your text or URL below to instantly generate a QR code. <br>
+                    Download and share your custom QR code with ease!
+                </p>
+                <input type="text" id="qrInput" placeholder="Enter text or URL" class="qr-input"/>
+                <button class="neon-button" onclick="generateQRCode()">Generate QR </button>
+            </div>
+
+            <div class="card1">
+                <div id="qrcode" class="qr-box"><h1>QR code</h1></div>
+            </div>
+        </section>
+
+        <div class="feature">
+            <div class="feature-card" onclick="downloadQRCode()">
+                <h3>Download QR</h3>
+                <p>Save your QR code as an image</p>
+            </div>
+            <div class="feature-card">
+                <h3>High Quality</h3>
+                <p>Scannable on all devices</p>
+            </div>
+            <div class="feature-card">
+                <h3>Custom Links</h3>
+                <p>Supports any text or URL</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
